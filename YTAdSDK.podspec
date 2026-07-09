@@ -40,6 +40,7 @@ DESC
 
   # 平台最低版本
   spec.ios.deployment_target = "11.0"
+  spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
   spec.frameworks = "UIKit", "Foundation"
 
@@ -47,7 +48,7 @@ DESC
   spec.dependency "AnyThinkiOS", "~> 6.5.43"
 
   # 二进制框架路径
-  spec.vendored_frameworks = "Frameworks/YTAdSDK.xcframework"
+  spec.vendored_frameworks = "Frameworks/YTAdSDK.framework"
 
   # 资源打包成独立 Bundle（关键，防止资源冲突）
   spec.resource_bundles = {
