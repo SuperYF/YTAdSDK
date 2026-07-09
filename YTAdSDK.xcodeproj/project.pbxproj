@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 75;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E5ACBC09EAE76EF03188F00 /* Pods_YTAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1538F5DB1A376346EB9D49 /* Pods_YTAdSDK.framework */; };
+		3E5ACBC09EAE76EF03188F00 /* Pods_YTAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1538F5DB1A376346EB9D49 /* Pods_YTAdSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +21,17 @@
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		73A755B82FF3CBBD00A4DEA0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			attributesByRelativePath = {
+				ThirdParty/AnyThinkAdxKuyingSDK/SmartdigimktSDK.xcframework = (
+					Weak,
+				);
+				ThirdParty/AnyThinkSDK.xcframework = (
+					Weak,
+				);
+				ThirdParty/AnyThinkSmartdigimktAdapter.xcframework = (
+					Weak,
+				);
+			};
 			publicHeaders = (
 				YTAdSDK.h,
 			);
@@ -136,7 +147,6 @@
 				};
 			};
 			buildConfigurationList = 73A755AB2FF3CBBD00A4DEA0 /* Build configuration list for PBXProject "YTAdSDK" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -145,6 +155,7 @@
 			);
 			mainGroup = 73A755A72FF3CBBD00A4DEA0;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 56;
 			productRefGroup = 73A755B22FF3CBBD00A4DEA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,7 +212,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\nset -e\nSDK_NAME=\"${PRODUCT_NAME}\"\nDESKTOP_OUTPUT=\"${HOME}/Desktop/Universal_${SDK_NAME}\"\n\n# 清空桌面旧包\nrm -rf \"${DESKTOP_OUTPUT}\"\nmkdir -p \"${DESKTOP_OUTPUT}\"\n\n# 创建系统独立临时目录，不和DerivedData争抢文件\nTMP_ROOT=$(mktemp -d -t sdk_build_tmp)\nTMP_IPHONEOS=\"${TMP_ROOT}/iphoneos\"\nTMP_SIM=\"${TMP_ROOT}/simulator\"\nmkdir -p \"${TMP_IPHONEOS}\" \"${TMP_SIM}\"\n\n# 仅一次性拷贝编译产物到临时目录，减少高频读取\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${SDK_NAME}.framework\" \"${TMP_IPHONEOS}/\"\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${SDK_NAME}.framework\" \"${TMP_SIM}/\"\n\nDEVICE_FRAME=\"${TMP_IPHONEOS}/${SDK_NAME}.framework\"\nSIM_FRAME=\"${TMP_SIM}/${SDK_NAME}.framework\"\n\n# 校验是否编译完成\nif [ ! -d \"${DEVICE_FRAME}\" ]; then\n  echo \"ERROR：缺少真机编译产物，先切换真机 Command+B\"\n  rm -rf \"${TMP_ROOT}\"\n  exit 1\nfi\nif [ ! -d \"${SIM_FRAME}\" ]; then\n  echo \"ERROR：缺少模拟器编译产物，先切换模拟器 Command+B\"\n  rm -rf \"${TMP_ROOT}\"\n  exit 1\nfi\n\n# 以真机framework为基础复制到桌面\ncp -R \"${DEVICE_FRAME}\" \"${DESKTOP_OUTPUT}/\"\nTARGET_FRAME=\"${DESKTOP_OUTPUT}/${SDK_NAME}.framework\"\n\n# 合并真机+模拟器二进制\nlipo -create \\\n\"${DEVICE_FRAME}/${SDK_NAME}\" \\\n\"${SIM_FRAME}/${SDK_NAME}\" \\\n-output \"${TARGET_FRAME}/${SDK_NAME}\"\n\n# 剔除模拟器arm64切片，上架无报错\nlipo -remove arm64 \"${TARGET_FRAME}/${SDK_NAME}\" -o \"${TARGET_FRAME}/${SDK_NAME}_temp\"\nmv -f \"${TARGET_FRAME}/${SDK_NAME}_temp\" \"${TARGET_FRAME}/${SDK_NAME}\"\n\n# 清理临时目录\nrm -rf \"${TMP_ROOT}\"\n\necho \"=====================================\"\necho \"打包成功：${DESKTOP_OUTPUT}/${SDK_NAME}.framework\"\nlipo -info \"${TARGET_FRAME}/${SDK_NAME}\"\necho \"=====================================\"\n";
+			shellScript = "
+";
 		};
 		B66310E426594E1D3C06E816 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -242,6 +254,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D9F91BDF2B9CAE0FE9C8532 /* Pods-YTAdSDK.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -250,13 +263,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/**";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/YTAdSDK/ThirdParty\"";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -268,7 +282,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.YTAdSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -284,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C79DE487F927B68552BB0861 /* Pods-YTAdSDK.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -292,13 +307,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/**";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/YTAdSDK/ThirdParty\"";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +326,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.YTAdSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
