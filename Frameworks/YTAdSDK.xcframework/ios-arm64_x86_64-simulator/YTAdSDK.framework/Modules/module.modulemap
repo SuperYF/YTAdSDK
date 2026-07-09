@@ -1,6 +1,0 @@
-framework module YTAdSDK {
-  umbrella header "YTAdSDK.h"
-  export *
-
-  module * { export * }
-}
