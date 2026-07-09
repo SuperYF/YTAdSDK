@@ -1,0 +1,13 @@
+# Xcode 编译缓存
+build/
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata
+
+# CocoaPods 产物
+Pods/
+Podfile.lock
+
+# 系统文件
+.DS_Store
