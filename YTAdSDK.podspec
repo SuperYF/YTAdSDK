@@ -39,7 +39,7 @@ DESC
   spec.source       = { :git => "https://github.com/SuperYF/YTAdSDK.git", :tag => "#{spec.version}" }
 
   # 平台最低版本
-  spec.ios.deployment_target = "11.0"
+  spec.ios.deployment_target = "12.0"
   spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
   spec.frameworks = "UIKit", "Foundation"
