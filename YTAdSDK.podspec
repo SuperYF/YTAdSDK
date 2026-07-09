@@ -48,7 +48,7 @@ DESC
   spec.dependency "AnyThinkiOS", "~> 6.5.43"
 
   # 二进制框架路径
-  spec.vendored_frameworks = "Frameworks/YTAdSDK.framework"
+  spec.vendored_frameworks = "Frameworks/YTAdSDK.xcframework"
 
   # 资源打包成独立 Bundle（关键，防止资源冲突）
   spec.resource_bundles = {
