@@ -53,7 +53,7 @@ DESC
   # 资源打包成独立 Bundle（关键，防止资源冲突）
   spec.resource_bundles = {
     # Bundle名称：Pod库名 + Resources
-    "YTAdSDK_Resources" => [
+    "YTAdSDKRes" => [
       "Frameworks/Resources/**/*.xcassets",
       "Frameworks/Resources/**/*.xib",
       "Frameworks/Resources/**/*.png",
