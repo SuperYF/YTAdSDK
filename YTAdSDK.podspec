@@ -52,13 +52,13 @@ DESC
 
   # 资源打包成独立 Bundle（关键，防止资源冲突）
 spec.resource_bundles = {
-    "YTAdSDKRes" => [
-      "YTAdSDK/Resources/**/*.xcassets",
-      "YTAdSDK/Resources/**/*.xib",
-      "YTAdSDK/Resources/**/*.png",
-      "YTAdSDK/Resources/**/*.jpg"
-    ]
-  }
+  "YTAdSDKRes" => [
+    "Frameworks/Resources/**/*.xcassets",
+    "Frameworks/Resources/**/*.xib",
+    "Frameworks/Resources/**/*.png",
+    "Frameworks/Resources/**/*.jpg"
+  ]
+}
 spec.pod_target_xcconfig = {
   "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64",
   # 仅模拟器强制12，真机不受影响，依然支持iOS11设备
