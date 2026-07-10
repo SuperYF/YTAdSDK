@@ -51,13 +51,12 @@ DESC
   spec.vendored_frameworks = "Frameworks/YTAdSDK.xcframework"
 
   # 资源打包成独立 Bundle（关键，防止资源冲突）
-  spec.resource_bundles = {
-    # Bundle名称：Pod库名 + Resources
+spec.resource_bundles = {
     "YTAdSDKRes" => [
-      "Frameworks/Resources/**/*.xcassets",
-      "Frameworks/Resources/**/*.xib",
-      "Frameworks/Resources/**/*.png",
-      "Frameworks/Resources/**/*.jpg"
+      "YTAdSDK/Resources/**/*.xcassets",
+      "YTAdSDK/Resources/**/*.xib",
+      "YTAdSDK/Resources/**/*.png",
+      "YTAdSDK/Resources/**/*.jpg"
     ]
   }
   
