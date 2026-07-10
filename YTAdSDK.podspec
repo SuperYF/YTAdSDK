@@ -59,6 +59,11 @@ spec.resource_bundles = {
       "YTAdSDK/Resources/**/*.jpg"
     ]
   }
+spec.pod_target_xcconfig = {
+  "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64",
+  # 仅模拟器强制12，真机不受影响，依然支持iOS11设备
+  "IPHONEOS_DEPLOYMENT_TARGET[sdk=iphonesimulator*]" => "12.0"
+}
   
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
