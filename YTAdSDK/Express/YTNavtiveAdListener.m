@@ -129,18 +129,18 @@ static __attribute__((constructor)) void es_sdk_navtive_original_imp(void) {
     
     //校验并发请求锁：判断当前广告位ID是否正在加载
     NSString *requestType = EasySAdSDKLoadADRequestTypeManager.shared.requestTypeDic[self.slotId] ?:@"";
-    if ([requestType isEqualToString:EasySDKRequest_Loading]) {
+    if ([requestType isEqualToString:YTAdSDKRequest_Loading]) {
         if ([self.delegate respondsToSelector:@selector(onYtErrorLoad:withError:)]) {
             [self.delegate onYtErrorLoad:self withError:[NSError errorWithDomain:@"EasySSDK" code:100022 userInfo:@{NSLocalizedDescriptionKey:@"其他开屏广告正在加载中",NSStringEncodingErrorKey:@"Er100022"}]];
         }
         [EasySSDKtrackMagager errorLog:@"" withSlotId:self.slotId withAdType:self.adType withstep:@"load" withErrorCode:@"Er100022" withRawData:@{@"msg":@"其他开屏广告正在加载中"}];
         return;
     }
-    [EasySAdSDKLoadADRequestTypeManager.shared upDataSlotId:self.slotId withType:EasySDKRequest_Loading];
+    [EasySAdSDKLoadADRequestTypeManager.shared upDataSlotId:self.slotId withType:YTAdSDKRequest_Loading];
     [[[EasySAdSDKLoadADManager alloc] init] loadAdData:self.adType withSlotId:self.slotId withHandler:^(BOOL success, EasySAdSDKLoadADModel * _Nullable model, NSError * _Nullable error) {
 
         if (success) {
-            [EasySAdSDKLoadADRequestTypeManager.shared upDataSlotId:self.slotId withType:EasySDKRequest_Success];
+            [EasySAdSDKLoadADRequestTypeManager.shared upDataSlotId:self.slotId withType:YTAdSDKRequest_Success];
 
             [self renderAdData:model];
             
@@ -148,7 +148,7 @@ static __attribute__((constructor)) void es_sdk_navtive_original_imp(void) {
                 [self.delegate onYtSuccessLoad:self];
             }
         }else {
-            [EasySAdSDKLoadADRequestTypeManager.shared upDataSlotId:self.slotId withType:EasySDKRequest_Fail];
+            [EasySAdSDKLoadADRequestTypeManager.shared upDataSlotId:self.slotId withType:YTAdSDKRequest_Fail];
             if ([self.delegate respondsToSelector:@selector(onYtErrorLoad:withError:)]) {
                 [self.delegate onYtErrorLoad:self withError:error];
             }
@@ -205,7 +205,7 @@ static __attribute__((constructor)) void es_sdk_navtive_original_imp(void) {
         return YES;
     }
     NSString *requestType = EasySAdSDKLoadADRequestTypeManager.shared.requestTypeDic[slotId] ?:@""; //请求是否加载成功
-    if ([requestType isEqualToString:EasySDKRequest_Success]) {
+    if ([requestType isEqualToString:YTAdSDKRequest_Success]) {
         
         return YES;
     }

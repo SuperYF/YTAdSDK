@@ -17,7 +17,7 @@
 #define MySDKWeakSelf __weak typeof(self) weakSelf = self; // 弱引用，避免循环引用
 #define MySDKStrongSelf __strong typeof(weakSelf) strongSelf = weakSelf; // 强引用，配合weakSelf使用
 #define MySDKIsEmptyString(str) (str == nil || [str isEqualToString:@""] || str == NULL) // 判断空字符串
-#define MySDKLog(fmt, ...) if (MySDKDebugMode) NSLog((@"[MySDK] " fmt), ##__VA_ARGS__) // 调试日志（仅Debug模式输出）
+#define MySDKLog(fmt, ...) if (MySDKDebugMode) NSLog((@"[YTAdSDK] " fmt), ##__VA_ARGS__) // 调试日志（仅Debug模式输出）
 
 // 2. 条件宏（区分Debug/Release环境、设备适配）
 #ifdef DEBUG
@@ -99,11 +99,14 @@ typedef NS_ENUM(NSInteger, EasySSplashAdCloseType) {
 };
 
 
-FOUNDATION_EXPORT NSString *const EasySDKRequest_Begin;
-FOUNDATION_EXPORT NSString *const EasySDKRequest_Loading;
-FOUNDATION_EXPORT NSString *const EasySDKRequest_Success;
-FOUNDATION_EXPORT NSString *const EasySDKRequest_Fail;
-FOUNDATION_EXPORT NSString *const EasySDKRequest_Unknown;
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Begin;
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Loading;
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Success;
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Fail;
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Unknown;
+
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Local;
+FOUNDATION_EXPORT NSString *const YTAdSDKRequest_Pierce;
 
 
 //#define DebugHeader  @{@"deviceId":@"test123",@"brand":@"xiaomi",@"model":@"Mi11",@"osVersion":@"Android 12",@"appPackage":@"com.example.yitui",@"os":@"1"}

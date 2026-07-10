@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shared;
 
 @property (nonatomic, assign) BOOL debugLog; //是否开启debug打印模式
-@property (nonatomic, assign) NSInteger timeoutInterval; //应用key
+@property (nonatomic, assign) NSInteger timeoutInterval; //
 - (NSString *)getSDKVersion;
 
 @end

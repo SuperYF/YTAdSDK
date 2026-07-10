@@ -33,6 +33,12 @@
 				);
 			};
 			publicHeaders = (
+				Express/YTNavtiveAdListener.h,
+				Express/YTSDKNativeExpressView.h,
+				LoadAD/YTSDKAdDelegate.h,
+				Splash/YTSDKSplashAdListener.h,
+				Start/YTSDKStartManager.h,
+				Tool/YTSDKConst.h,
 				YTAdSDK.h,
 			);
 			target = 73A755B02FF3CBBD00A4DEA0 /* YTAdSDK */;
@@ -270,7 +276,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/YTAdSDK/ThirdParty\"";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +320,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/YTAdSDK/ThirdParty\"";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

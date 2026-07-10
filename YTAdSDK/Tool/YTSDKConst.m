@@ -11,9 +11,7 @@
 
 #pragma mark - 基础配置常量 赋值
 NSString *const MySDKVersion = @"1.0.0"; // 可根据SDK版本修改
-NSString *const MySDKAppID = @"com.mysdk.official"; // 替换为自己的bundleId格式
-NSString *const MySDKDefaultBaseUrl = @"https://api.mysdk.com/v1/"; // 替换为实际接口地址
-//UIColor *const MySDKColor = [UIColor colorWithRed:1 green:0.88 blue:0 alpha:1];
+NSString *const MySDKAppID = @"com.ios.YTAdSDK"; // 替换为自己的bundleId格式
 
 #pragma mark - 屏幕相关常量 赋值（修复编译报错：改为方法获取，避免非编译期常量）
 CGFloat MySDKScreenWidth(void) {
@@ -38,7 +36,7 @@ UIColor* MySDKColor(void) {
 
 
 #pragma mark - 错误相关常量 赋值
-NSString *const MySDKErrorDomain = @"com.mysdk.error";
+NSString *const MySDKErrorDomain = @"com.ios.YTAdSDK";
 const NSInteger MySDKErrorCodeInitFailed = 10001;
 const NSInteger MySDKErrorCodeInvalidParam = 10002;
 const NSInteger MySDKErrorCodeNetworkError = 10003;
@@ -60,10 +58,13 @@ NSString *const MySDKUnknown = @"未知";
 
 
 #pragma mark - 请求状态 赋值
-NSString *const EasySDKRequest_Begin = @"YT_EasySDKRequest_Begin";
-NSString *const EasySDKRequest_Loading = @"YT_EasySDKRequest_Loading";
-NSString *const EasySDKRequest_Success = @"YT_EasySDKRequest_Success";
-NSString *const EasySDKRequest_Fail = @"YT_EasySDKRequest_Fail";
-NSString *const EasySDKRequest_Unknown = @"YT_EasySDKRequest_Unknown";
+NSString *const YTAdSDKRequest_Begin = @"YT_YTAdSDKRequest_Begin";
+NSString *const YTAdSDKRequest_Loading = @"YT_YTAdSDKRequest_Loading";
+NSString *const YTAdSDKRequest_Success = @"YT_YTAdSDKRequest_Success";
+NSString *const YTAdSDKRequest_Fail = @"YT_YTAdSDKRequest_Fail";
+NSString *const YTAdSDKRequest_Unknown = @"YT_YTAdSDKRequest_Unknown";
 
+#pragma mark - 请求地址设置-测试使用
+NSString *const YTAdSDKRequest_Local = @"YTAdSDKRequest_Local"; //本地
+NSString *const YTAdSDKRequest_Pierce = @"YTAdSDKRequest_Pierce";//外网穿透
 

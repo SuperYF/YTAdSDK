@@ -19,14 +19,16 @@
 #import "YTSDKAPIConfiguration.h"
 #import "EasySSDKStartConfiguration.h"
 #import "YTSDKAPIConfiguration.h"
+#import "YTSDKConst.h"
 
 static NSString *_globalPubKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl+VXmcqSb6ofTyKidE/4Wdfoj8avfkW87rReMkBwi5WuNFXdh/E2IF6+nNvBS2wZDvGvOXCq66eEM80awC0aV3H5iSWoNdg6fWcvdRGo/AKOFIpe1sYHlZgD9iOhW4fWn/qpP/TeI8O/tknPlKE3k8emYdJBBR/6q7xIUXDlFjrEwIG6iITt6B6wHFfnfw0gsEzSP63AVv0ckRG7ms4yPQkSTufi4oVngD1lLvdK4UPzgpd7cq1i+CV9fDRhlB7QKwzJfCd8jEYy26JienSKKU2Njs/H0idlXjEPc5kd8/RaBseSChq9e6AH3YiDs5ENI+ullxRop9GnBD+EqLWOuwIDAQAB";
-//static NSString *local_baseUrl = @"http:192.168.2.22:9801"; // 替换成你的正式域名
-static NSString *_baseUrl = @"https://ssapi.ibtfx.cn"; // 替换成你的正式域名
+static NSString *_baseUrl = @"https://ssapi.ibtfx.cn"; // 正式域名
 // ==================== 接口域名 ====================
     // 测试环境
+static NSString *local_baseUrl = @"http:192.168.2.22:9801"; // 替换成你的正式域名
+
     //外网环境
-//static NSString *test_baseUrl = @"http://223.72.157.125:39801";
+static NSString *pierce_baseUrl = @"http://223.72.157.125:39801";
 
 @implementation EasySNetWorkUtil
 
@@ -84,11 +86,16 @@ static NSString *_baseUrl = @"https://ssapi.ibtfx.cn"; // 替换成你的正式�
     // 7. 网络请求
     
     NSString *fullUrl = [_baseUrl stringByAppendingString:api];
-//    NSString *fullUrl = [local_baseUrl stringByAppendingString:api];
-//    NSString *fullUrl = [test_baseUrl stringByAppendingString:api];
-//    if (YTSDKIsTest.shared.istest) {
-//        fullUrl = [test_baseUrl stringByAppendingString:api];
-//    }
+  
+    NSString *urlType = [[NSUserDefaults standardUserDefaults] objectForKey:MySDKErrorDomain];
+    if ([urlType isEqualToString:YTAdSDKRequest_Local]) {
+        fullUrl = [local_baseUrl stringByAppendingString:api];
+    }
+    if ([urlType isEqualToString:YTAdSDKRequest_Pierce]) {
+        fullUrl = [pierce_baseUrl stringByAppendingString:api];
+    }
+
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:fullUrl]];
     // 🔥 设置请求超时时间（单位：秒）
     request.timeoutInterval = YTSDKAPIConfiguration.shared.timeoutInterval; // 10秒超时（最常用）
