@@ -710,7 +710,27 @@
 		</dict>
 		<key>Headers/YTAdSDK.h</key>
 		<data>
-		2J5m7Gw5XNvyzKpElsSghH1bgqI=
+		AZKe3D12oqKkADz57tJ3pL6B3ro=
+		</data>
+		<key>Headers/YTNavtiveAdListener.h</key>
+		<data>
+		yJEEECe441USkK0nOPR/QlXRbAo=
+		</data>
+		<key>Headers/YTSDKAdDelegate.h</key>
+		<data>
+		t5+F4sAE4F6mXvaCM48ZEJx5zk8=
+		</data>
+		<key>Headers/YTSDKNativeExpressView.h</key>
+		<data>
+		GqEv+/cp5WpD1RY41XODwU2lsGM=
+		</data>
+		<key>Headers/YTSDKSplashAdListener.h</key>
+		<data>
+		FaFBPnTnlwOLuAdFOF9ny97W12A=
+		</data>
+		<key>Headers/YTSDKStartManager.h</key>
+		<data>
+		HgWg3V13UScYcl+hD5OVfyfLG5o=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -2933,11 +2953,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2J5m7Gw5XNvyzKpElsSghH1bgqI=
+			AZKe3D12oqKkADz57tJ3pL6B3ro=
 			</data>
 			<key>hash2</key>
 			<data>
-			hxY8u70RjS6rwclFrBH9ACvPyU9xDd4Y8MfEvIhfstM=
+			cRFpkj+QMZNi9ytl9siAPABfKmdUWUPMR1Rk9Vkwecw=
+			</data>
+		</dict>
+		<key>Headers/YTNavtiveAdListener.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yJEEECe441USkK0nOPR/QlXRbAo=
+			</data>
+			<key>hash2</key>
+			<data>
+			JNePBmKiNV+agT9phg7f+BDCxLuQgcAO8jYLA98Hdhg=
+			</data>
+		</dict>
+		<key>Headers/YTSDKAdDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			t5+F4sAE4F6mXvaCM48ZEJx5zk8=
+			</data>
+			<key>hash2</key>
+			<data>
+			zeaXB5NYE+OuhGSEOyBfDMYAFZpH703rBQYsT47pPmM=
+			</data>
+		</dict>
+		<key>Headers/YTSDKNativeExpressView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GqEv+/cp5WpD1RY41XODwU2lsGM=
+			</data>
+			<key>hash2</key>
+			<data>
+			OMYk44wtQoyilUhkL5xKBmXApDGujIufssoQRpGn5j8=
+			</data>
+		</dict>
+		<key>Headers/YTSDKSplashAdListener.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FaFBPnTnlwOLuAdFOF9ny97W12A=
+			</data>
+			<key>hash2</key>
+			<data>
+			1ltUmLF8i7LdXR8nLa1i7wn6sGVrRIGBAWPmMiI1Y/w=
+			</data>
+		</dict>
+		<key>Headers/YTSDKStartManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HgWg3V13UScYcl+hD5OVfyfLG5o=
+			</data>
+			<key>hash2</key>
+			<data>
+			WkRgOEJ0AwZTb4/7Ylj+9fPTXvqNQEXIcpRD/d4FwQI=
 			</data>
 		</dict>
 		<key>LICENSE</key>
