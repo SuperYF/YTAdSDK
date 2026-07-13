@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YTAdSDK"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.4"
   spec.summary      = "iOS开源工具SDK，封装网络、广告、埋点、基础组件"
 
   # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ DESC
   spec.source       = { :git => "https://github.com/SuperYF/YTAdSDK.git", :tag => "#{spec.version}" }
 
   # 平台最低版本
-  spec.ios.deployment_target = "11.0"
+  spec.ios.deployment_target = "12.0"
   spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
   spec.frameworks = "UIKit", "Foundation"
@@ -53,10 +53,10 @@ DESC
   # 资源打包成独立 Bundle（关键，防止资源冲突）
 spec.resource_bundles = {
   "YTAdSDKRes" => [
-    "Frameworks/Resources/**/*.xcassets",
-    "Frameworks/Resources/**/*.xib",
-    "Frameworks/Resources/**/*.png",
-    "Frameworks/Resources/**/*.jpg"
+    "Resources/**/*.xcassets",
+    "Resources/**/*.xib",
+    "Resources/**/*.png",
+    "Resources/**/*.jpg"
   ]
 }
 spec.pod_target_xcconfig = {
