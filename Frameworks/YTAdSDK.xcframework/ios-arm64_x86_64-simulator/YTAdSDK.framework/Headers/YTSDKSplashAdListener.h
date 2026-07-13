@@ -24,8 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 //@property (nonatomic, weak, readonly, nullable) UIViewController *splashRootViewController;
 
-// 单例
-+ (instancetype)shared;
 
 
 - (BOOL)isAdReady:(NSString *)placementID; //是否有广告
