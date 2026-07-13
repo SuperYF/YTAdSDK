@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YTAdSDK"
-  spec.version      = "1.0.5"
+  spec.version      = "1.0.6"
   spec.summary      = "iOS开源工具SDK，封装网络、广告、埋点、基础组件"
 
   # This description is used to generate tags and improve search results.
