@@ -740,17 +740,9 @@
 		<data>
 		Epr/YakImZxGmvCS4Zs3tpgdc4s=
 		</data>
-		<key>LICENSE</key>
-		<data>
-		4PNM6YPBsodBByn9cOp64YSOthY=
-		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		V+ndFJv5ElrIkkTp4edKsZgM7kI=
-		</data>
-		<key>README</key>
-		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
 		</data>
 		<key>SmartdigimktSDK.bundle/RedPacket.png</key>
 		<data>
@@ -3030,17 +3022,6 @@
 			WkRgOEJ0AwZTb4/7Ylj+9fPTXvqNQEXIcpRD/d4FwQI=
 			</data>
 		</dict>
-		<key>LICENSE</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4PNM6YPBsodBByn9cOp64YSOthY=
-			</data>
-			<key>hash2</key>
-			<data>
-			KYfNubCcVDTtKLywQu/MNEJugwmJxVC2dHa2mrLqWDo=
-			</data>
-		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
@@ -3050,17 +3031,6 @@
 			<key>hash2</key>
 			<data>
 			+1j4qYkDsPSnkUjewrMK4o7NXBh3hps/IbDxy6MFlKY=
-			</data>
-		</dict>
-		<key>README</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
-			</data>
-			<key>hash2</key>
-			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 			</data>
 		</dict>
 		<key>SmartdigimktSDK.bundle/RedPacket.png</key>
