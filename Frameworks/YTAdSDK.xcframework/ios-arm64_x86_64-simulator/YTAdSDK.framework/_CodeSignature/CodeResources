@@ -710,7 +710,7 @@
 		</dict>
 		<key>Headers/YTAdSDK.h</key>
 		<data>
-		Wj3OQvAX8X6MiRh9Xw7LjPqpJCA=
+		bdgWD9c32WPHUxzKRmRk8sWQOAs=
 		</data>
 		<key>Headers/YTNavtiveAdListener.h</key>
 		<data>
@@ -718,15 +718,19 @@
 		</data>
 		<key>Headers/YTSDKAdDelegate.h</key>
 		<data>
-		t5+F4sAE4F6mXvaCM48ZEJx5zk8=
+		IeQdD+3gDpf1zelmfWHTnwTKFG0=
 		</data>
 		<key>Headers/YTSDKConst.h</key>
 		<data>
-		u1dNcrZs89Bi6urbWZHnOp9AJSM=
+		T8JeBhF3lik/9iTpII+4uMLCtQQ=
 		</data>
 		<key>Headers/YTSDKNativeExpressView.h</key>
 		<data>
-		GqEv+/cp5WpD1RY41XODwU2lsGM=
+		bUzFTp74jvxmk/SJ3S+ubBKMm1M=
+		</data>
+		<key>Headers/YTSDKRewardedVideoAdListener.h</key>
+		<data>
+		xRdm1BtHEVs2JQ/ziObYcMQbom4=
 		</data>
 		<key>Headers/YTSDKSplashAdListener.h</key>
 		<data>
@@ -2949,11 +2953,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Wj3OQvAX8X6MiRh9Xw7LjPqpJCA=
+			bdgWD9c32WPHUxzKRmRk8sWQOAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			YP/oQ7T3hPFRWc56WJbchMsENydniLWvJehZ+X56fIQ=
+			r8pSZdq+lDyWb34O3fhrAGjhfLSqNLRJSTlsx1mCp6M=
 			</data>
 		</dict>
 		<key>Headers/YTNavtiveAdListener.h</key>
@@ -2971,33 +2975,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t5+F4sAE4F6mXvaCM48ZEJx5zk8=
+			IeQdD+3gDpf1zelmfWHTnwTKFG0=
 			</data>
 			<key>hash2</key>
 			<data>
-			zeaXB5NYE+OuhGSEOyBfDMYAFZpH703rBQYsT47pPmM=
+			K0oopIjuY2GM4XgsD6bho5ElNg620T5d85nLWPJ9Mdc=
 			</data>
 		</dict>
 		<key>Headers/YTSDKConst.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u1dNcrZs89Bi6urbWZHnOp9AJSM=
+			T8JeBhF3lik/9iTpII+4uMLCtQQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			zWswsM5gtAgYt4CRIW13JhQaNNYGULfMHn71ygJ2MEo=
+			RUscJY0iBQOJsGN7427SzT6iWZzOj0jDmNkm4M2pe/U=
 			</data>
 		</dict>
 		<key>Headers/YTSDKNativeExpressView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GqEv+/cp5WpD1RY41XODwU2lsGM=
+			bUzFTp74jvxmk/SJ3S+ubBKMm1M=
 			</data>
 			<key>hash2</key>
 			<data>
-			OMYk44wtQoyilUhkL5xKBmXApDGujIufssoQRpGn5j8=
+			E5KcLYiTMiPO0fuF7qvLdbEd982+kbDJWxHi7veAHbw=
+			</data>
+		</dict>
+		<key>Headers/YTSDKRewardedVideoAdListener.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xRdm1BtHEVs2JQ/ziObYcMQbom4=
+			</data>
+			<key>hash2</key>
+			<data>
+			q5jtEteCdR5qZ15d5MtTJAsAJEAyq0kKr7VqdgqDst8=
 			</data>
 		</dict>
 		<key>Headers/YTSDKSplashAdListener.h</key>

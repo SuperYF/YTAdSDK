@@ -103,6 +103,58 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+//MARK: 激励视频
+@protocol YTSDKRewardedDelegate <NSObject>
+//广告下载
+/// 开屏广告加载完成
+/// - Parameters:
+///   - placementID: 广告位ID
+- (void)onYtAdLoaded:(NSString *)placementID;
+
+/// 广告位加载失败
+/// - Parameters:
+///   - placementID: 广告位ID
+///   - error: 错误信息
+/// 开屏广告加载失败
+- (void)onYtNoAdError:(NSString *)placementID error:(NSError *_Nullable)error;
+///// Callback when the successful loading of the ad
+//- (void)didFinishLoadingADWithPlacementID:(NSString *)placementID withType:(BOOL)isVideo; //请求成功
+//
+//
+//
+///// Callback of ad loading failure
+//- (void)didFailToLoadADWithPlacementID:(NSString*)placementID
+//                              withType:(BOOL)isVideo
+//                                 error:(NSError*)error ;
+//渲染 -
+- (void)onYtAdRenderSuccess:(NSString *)placementID;
+- (void)onYtAdRenderFail:(NSString *)placementID error:(NSError *_Nullable)error;
+
+/// Rewarded video ad play starts
+- (void)rewardedVideoDidStartPlayingForPlacementID:(NSString *)placementID
+                                             extra:(NSDictionary *)extra; //开始播放
+
+/// Rewarded video ad play ends
+- (void)rewardedVideoDidEndPlayingForPlacementID:(NSString *)placementID
+                                           extra:(NSDictionary *)extra;
+
+/// Rewarded video ad clicks
+- (void)rewardedVideoDidClickForPlacementID:(NSString *)placementID
+                                      extra:(NSDictionary *)extra; //点击广告
+
+/// Rewarded video ad closed
+- (void)rewardedVideoDidCloseForPlacementID:(NSString *)placementID
+                                   rewarded:(BOOL)rewarded
+                                      extra:(NSDictionary *)extra; //关闭
+
+/// Rewarded video ad reward distribution
+- (void)rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID
+                                             extra:(NSDictionary *)extra; //完成
+
+
+@end
+
+
 @interface YTSDKAdDelegate : NSObject
 
 @end

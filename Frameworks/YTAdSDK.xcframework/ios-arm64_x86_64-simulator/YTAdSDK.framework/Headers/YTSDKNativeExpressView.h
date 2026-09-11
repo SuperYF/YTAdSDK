@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class EasySAdSDKLoadADModel,YTSDKNativeExpressView,YTSDKNavtiveAdModel;
+@class YTAdSDKLoadADModel,YTSDKNativeExpressView,YTSDKNavtiveAdModel;
 //typedef NS_ENUM(NSInteger, EasySNativeExpressAdModelType) {
 //    EasySNativeExpressType_LeftImg = 0,             // 左图 右文
 //    EasySNativeExpressType_RightImg = 1,          //  右图 左文
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 ////    EasySNativeExpressType_LeftImg = 3,            // click Ad 点击广告
 //
 //};
-@protocol EasySNativeExpressDelegate <NSObject>
+@protocol YTSDKNativeExpressDelegate <NSObject>
 
 - (void)onAdCloseClick:(YTSDKNativeExpressView *)adView;
 
@@ -28,13 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface YTSDKNativeExpressView : UIView
-@property(nonatomic, weak) id<EasySNativeExpressDelegate> delegate;
-//@property (nonatomic, strong) UIViewController *rootViewController;
+@property(nonatomic, weak) id<YTSDKNativeExpressDelegate> delegate;
+@property (nonatomic, assign) CGSize nativeSize;
 @property (nonatomic, strong) YTSDKNavtiveAdModel *nativeModel;
-- (void)setUpSubviews:(EasySAdSDKLoadADModel *)model withAdImage:(UIImage *)image;
+- (void)setUpSubviews:(YTAdSDKLoadADModel *)model withAdImage:(UIImage *)image;
 
-- (void)setUpSubviews:(EasySAdSDKLoadADModel *)model withAdImage:(UIImage *)image withRootViewController:(UIViewController *)rootVC ;
-//- (void)setUpSubviews:(EasySAdSDKLoadADModel *)model withAdImage:(UIImage *)image withAdSize:(CGSize)size withSizeToFit:(BOOL)sizeToFit withRootViewController:(UIViewController *)rootVC;
+- (void)setUpSubviews:(YTAdSDKLoadADModel *)model withAdImage:(UIImage *)image withRootViewController:(UIViewController *)rootVC ;
 
 @end
 

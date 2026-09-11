@@ -15,13 +15,15 @@ FOUNDATION_EXPORT const unsigned char YTAdSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like
 
-
+//公开头文件需要添加
 #import <YTAdSDK/YTSDKNativeExpressView.h>
 #import <YTAdSDK/YTNavtiveAdListener.h>
 #import <YTAdSDK/YTSDKSplashAdListener.h>
 #import <YTAdSDK/YTSDKAdDelegate.h>
 #import <YTAdSDK/YTSDKStartManager.h>
 #import <YTAdSDK/YTSDKConst.h>
+#import <YTAdSDK/YTSDKRewardedVideoAdListener.h>
+
 
 
 

@@ -17,7 +17,7 @@
 #define MySDKWeakSelf __weak typeof(self) weakSelf = self; // 弱引用，避免循环引用
 #define MySDKStrongSelf __strong typeof(weakSelf) strongSelf = weakSelf; // 强引用，配合weakSelf使用
 #define MySDKIsEmptyString(str) (str == nil || [str isEqualToString:@""] || str == NULL) // 判断空字符串
-#define MySDKLog(fmt, ...) if (MySDKDebugMode) NSLog((@"[YTAdSDK] " fmt), ##__VA_ARGS__) // 调试日志（仅Debug模式输出）
+#define MySDKLog(fmt, ...) if (YTSDKDebugMode) NSLog((@"[YTAdSDK] " fmt), ##__VA_ARGS__) // 调试日志（仅Debug模式输出）
 
 // 2. 条件宏（区分Debug/Release环境、设备适配）
 #ifdef DEBUG
@@ -33,11 +33,7 @@
 
 #pragma mark - 基础配置常量
 // SDK版本号（与SDK主版本保持一致）
-FOUNDATION_EXPORT NSString *const MySDKVersion;
-// SDK唯一标识（用于区分不同SDK，可填写bundleId格式）
-FOUNDATION_EXPORT NSString *const MySDKAppID;
-// SDK默认请求BaseUrl（若有网络请求场景）
-FOUNDATION_EXPORT NSString *const MySDKDefaultBaseUrl;
+FOUNDATION_EXPORT NSString *const YTAdSDKVersion;
 
 
 #pragma mark - 屏幕相关方法（适配所有iOS设备，修复编译报错）
@@ -48,7 +44,6 @@ FOUNDATION_EXPORT CGFloat MySDKScreenHeight(void);
 // 屏幕缩放比例（Retina屏为2.0/3.0）
 FOUNDATION_EXPORT CGFloat MySDKScreenScale(void);
 // 状态栏高度（适配刘海屏/非刘海屏）
-FOUNDATION_EXPORT CGFloat MySDKStatusBarHeight(void);
 FOUNDATION_EXPORT UIColor* MySDKColor(void);
 
 #pragma mark - 错误相关常量
@@ -77,7 +72,7 @@ FOUNDATION_EXPORT const NSInteger MySDKMaxRetryCount;
 // 超时时间（单位：秒）
 FOUNDATION_EXPORT const NSTimeInterval MySDKRequestTimeout;
 // 是否开启调试模式（默认关闭，Release包需置为NO）
-FOUNDATION_EXPORT const BOOL MySDKDebugMode;
+FOUNDATION_EXPORT const BOOL YTSDKDebugMode;
 
 #pragma mark - 通用字符串常量（可根据业务补充）
 // 空字符串占位符
