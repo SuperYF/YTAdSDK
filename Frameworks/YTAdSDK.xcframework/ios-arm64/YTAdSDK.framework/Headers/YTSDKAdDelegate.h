@@ -103,6 +103,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+//MARK: 插屏广告
+@class YTSDKInterstitialAdListener, YTSDKInterstitialAdView;
+@protocol YTSDKInterstitialAdDelegate <NSObject>
+@required
+/// 渲染成功，可调用 showInViewController: 展示
+- (void)onInterstitialRenderSuccess:(YTSDKInterstitialAdView *)adView;
+/// 点击关闭
+- (void)onInterstitialAdCloseClick:(YTSDKInterstitialAdView *)adView;
+
+@optional
+- (void)onInterstitialErrorLoad:(YTSDKInterstitialAdListener *)listener withError:(NSError *)error;
+- (void)onInterstitialSuccessLoad:(YTSDKInterstitialAdListener *)listener;
+- (void)onInterstitialRenderFail:(YTSDKInterstitialAdListener *)listener withError:(NSError *)error;
+- (void)onInterstitialAdClick:(YTSDKInterstitialAdView *)adView;
+
+@end
+
 //MARK: 激励视频
 @protocol YTSDKRewardedDelegate <NSObject>
 //广告下载
