@@ -4,7 +4,7 @@
 //
 //  Created by renpin-ios on 2026/6/9.
 //  Copyright © 2026 Taku. All rights reserved.
-//
+// 上图下文
 
 #import <UIKit/UIKit.h>
 
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) YTSDKNavtiveAdModel *nativeModel;
 - (void)setUpSubviews:(YTAdSDKLoadADModel *)model withAdImage:(UIImage *)image;
 
-- (void)setUpSubviews:(YTAdSDKLoadADModel *)model withAdImage:(UIImage *)image withRootViewController:(UIViewController *)rootVC ;
+//- (void)setUpSubviews:(YTAdSDKLoadADModel *)model withAdImage:(UIImage *)image withRootViewController:(UIViewController *)rootVC ;
 
 @end
 
