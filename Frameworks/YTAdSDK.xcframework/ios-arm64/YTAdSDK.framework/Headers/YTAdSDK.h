@@ -25,6 +25,9 @@ FOUNDATION_EXPORT const unsigned char YTAdSDKVersionString[];
 #import <YTAdSDK/YTSDKRewardedVideoAdListener.h>
 #import <YTAdSDK/YTSDKInterstitialAdListener.h>
 #import <YTAdSDK/YTSDKInterstitialAdView.h>
+#import <YTAdSDK/YTSDKNavtiveAdModel.h>
+#import <YTAdSDK/YTAdSDKLoadADModel.h>
+#import <YTAdSDK/YTSDKAPIConfiguration.h>
 
 
 

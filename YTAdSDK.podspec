@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YTAdSDK"
-  spec.version      = "2.0.0"
+  spec.version      = "2.0.1"
   spec.summary      = "iOS开源工具SDK，封装网络、广告、埋点、基础组件"
 
   # This description is used to generate tags and improve search results.
@@ -45,7 +45,7 @@ DESC
   spec.frameworks = "UIKit", "Foundation"
 
   # 4. 第三方依赖（如有，示例）
-  spec.dependency "AnyThinkiOS", "~> 6.5.43"
+  #spec.dependency "AnyThinkiOS", "~> 6.5.43"
 
   # 二进制框架路径
   spec.vendored_frameworks = "Frameworks/YTAdSDK.xcframework"

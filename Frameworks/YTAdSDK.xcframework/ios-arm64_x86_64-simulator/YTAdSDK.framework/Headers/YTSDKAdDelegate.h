@@ -100,7 +100,8 @@ NS_ASSUME_NONNULL_BEGIN
 //点击广告
 - (void)atOnAdClick:(YTSDKNativeExpressView *)adView;
 
-
+//展示成功
+- (void)onYtAdShow:(NSString *)placementID;
 @end
 
 //MARK: 插屏广告
