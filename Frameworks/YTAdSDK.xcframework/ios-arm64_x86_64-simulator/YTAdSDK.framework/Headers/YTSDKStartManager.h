@@ -31,7 +31,7 @@ typedef void (^EasySCompletionHandler)(BOOL success, NSError * _Nullable error);
 
 /// 关闭非必要信息采集与权限申请开关
 /// @param enable NO:关闭非必要采集 YES:开启（默认YES）
-- (void)setUnnecessaryInfoCollectionEnable:(BOOL)enable;
+- (void)infoCollectionEnable:(BOOL)enable;
 
 
 @end
