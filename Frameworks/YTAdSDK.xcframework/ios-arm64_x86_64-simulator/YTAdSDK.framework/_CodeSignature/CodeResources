@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/YTNavtiveAdListener.h</key>
 		<data>
-		yJEEECe441USkK0nOPR/QlXRbAo=
+		ATObHY3nZuVI0FcQ/eKkN4ZgrPI=
 		</data>
 		<key>Headers/YTSDKAPIConfiguration.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/YTSDKAdDelegate.h</key>
 		<data>
-		BhzMVJtpLzKoh57Pb7o43ND8g94=
+		lwbbZJF9MkXLb0jzOs9Z7dePxQ0=
 		</data>
 		<key>Headers/YTSDKConst.h</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Headers/YTSDKSplashAdListener.h</key>
 		<data>
-		J//zJYRUON9wmyu5CrwxIidu5hw=
+		5gtJcoyIFBYz0XPvneK4N//xF5o=
 		</data>
 		<key>Headers/YTSDKStartManager.h</key>
 		<data>
-		HgWg3V13UScYcl+hD5OVfyfLG5o=
+		mh9fHLa0OtiaqEoIG3oul4Zkllw=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JNePBmKiNV+agT9phg7f+BDCxLuQgcAO8jYLA98Hdhg=
+			IZYfLiwYIGlJs/SbIHwrKFDu2cw8kwJlDGakk7EWn/I=
 			</data>
 		</dict>
 		<key>Headers/YTSDKAPIConfiguration.h</key>
@@ -99,7 +99,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DPyq/+Bkby+m+dYRhLL9mSfaO4kir/oVrXjTVw8bjLg=
+			ypOJftkK2otPj7JVmh3CcAISeH2Wux85JmwEwe9oj4I=
 			</data>
 		</dict>
 		<key>Headers/YTSDKConst.h</key>
@@ -148,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dKzdGhKOHbUgjf91Z1WgBtAOuiEk47VrKwMl9YPJzeg=
+			v2GWaVFVX5IknbsKg7TiNy8IKH0rP8XeLTC8xEwS2mQ=
 			</data>
 		</dict>
 		<key>Headers/YTSDKStartManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WkRgOEJ0AwZTb4/7Ylj+9fPTXvqNQEXIcpRD/d4FwQI=
+			gOR7NhgRZvmhFis+H8Qjln2tXnIoaeNzzkPZ5GicOFY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

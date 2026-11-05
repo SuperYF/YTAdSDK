@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setExpressViewAcceptedSize:(CGSize)size;
 
-- (void)render;
+//- (void)render;
 
 //销毁广告
 - (void)destroy;

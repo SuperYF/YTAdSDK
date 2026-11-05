@@ -30,14 +30,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 对外提供的方法
 //加载开屏广告
-- (void)setSlotId:(NSString *)slotId withAdSize:(CGSize)size;
+//- (void)setSlotId:(NSString *)slotId withAdSize:(CGSize)size;
 
 
 //请求广告
 - (void)loadAD:(NSString *)placementID withContainerView:(UIView * _Nullable)containerView;
 //show
 - (void)showSplashViewInRootViewController:(UIViewController *)viewController;
-- (void)showSplashViewInWindow:(UIWindow *)window delegate:(id<YTSDKSplashAdDelegate>)delegate;
+//- (void)showSplashViewInWindow:(UIWindow *)window delegate:(id<YTSDKSplashAdDelegate>)delegate;
 
 
 @end

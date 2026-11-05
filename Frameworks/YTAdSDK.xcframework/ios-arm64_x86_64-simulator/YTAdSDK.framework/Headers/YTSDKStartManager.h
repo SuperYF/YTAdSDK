@@ -24,13 +24,15 @@ typedef void (^EasySCompletionHandler)(BOOL success, NSError * _Nullable error);
 @property (nonatomic, assign, readonly) BOOL isStart; //初始化是否成功：true 成功 false 失败
 
 + (instancetype)shared;
-//- (BOOL)startWithAppID:(NSString *)appID
-//                appKey:(NSString *)appKey;
-////+ (void)initWithSyncCompletionHandler:(EasySCompletionHandler)completionHandler;
 
 - (void)startWithAppID:(NSString *)appID
                 appKey:(NSString *)appKey
     completionHandler:(EasySCompletionHandler)completionHandler;
+
+/// 关闭非必要信息采集与权限申请开关
+/// @param enable NO:关闭非必要采集 YES:开启（默认YES）
+- (void)setUnnecessaryInfoCollectionEnable:(BOOL)enable;
+
 
 @end
 

@@ -118,11 +118,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onInterstitialSuccessLoad:(YTSDKInterstitialAdListener *)listener;
 - (void)onInterstitialRenderFail:(YTSDKInterstitialAdListener *)listener withError:(NSError *)error;
 - (void)onInterstitialAdClick:(YTSDKInterstitialAdView *)adView;
-
+//展示成功
+- (void)onYtAdShow:(NSString *)placementID;
 @end
 
 //MARK: 激励视频
 @protocol YTSDKRewardedDelegate <NSObject>
+@optional
+
 //广告下载
 /// 开屏广告加载完成
 /// - Parameters:
@@ -169,7 +172,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID
                                              extra:(NSDictionary *)extra; //完成
 
-
+//展示成功
+- (void)onYtAdShow:(NSString *)placementID;
 @end
 
 
