@@ -43,6 +43,10 @@ DESC
   spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
 spec.frameworks = 'AVFoundation', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'AdSupport', 'AppTrackingTransparency', 'WebKit', 'SystemConfiguration','UIKit'
+spec.pod_target_xcconfig = {
+  'OTHER_LDFLAGS' => '-ObjC'
+}
+
   # 4. 第三方依赖（如有，示例）
   #spec.dependency "AnyThinkiOS", "~> 6.5.43"
 
