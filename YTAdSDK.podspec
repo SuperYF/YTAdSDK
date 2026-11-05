@@ -42,7 +42,7 @@ DESC
   spec.ios.deployment_target = "15.0"
   spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
-spec.frameworks = 'AVFoundation', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'AdSupport', 'AppTrackingTransparency', 'WebKit', 'SystemConfiguration','UIKit'
+spec.frameworks = 'AVFoundation', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'AdSupport', 'AppTrackingTransparency', 'WebKit', 'SystemConfiguration','UIKit'.'CoreMedia'
 spec.pod_target_xcconfig = {
   'OTHER_LDFLAGS' => '-ObjC'
 }
