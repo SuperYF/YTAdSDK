@@ -42,7 +42,7 @@ DESC
   spec.ios.deployment_target = "15.0"
   spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
-spec.frameworks = 'AVFoundation', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'AdSupport', 'AppTrackingTransparency', 'WebKit', 'SystemConfiguration'
+spec.frameworks = 'AVFoundation', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'AdSupport', 'AppTrackingTransparency', 'WebKit', 'SystemConfiguration','UIKit'
   # 4. 第三方依赖（如有，示例）
   #spec.dependency "AnyThinkiOS", "~> 6.5.43"
 
